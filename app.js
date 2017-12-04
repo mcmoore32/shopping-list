@@ -20,10 +20,9 @@ function addListItems(){
       $('.shopping-list').html(listItem);
     }
   });
-  return itemArray;
 };
 
-var out = addListItems();
-console.log(out);
+addListItems();
+
 
 
