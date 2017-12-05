@@ -21,9 +21,10 @@ function makeList(){
     for(var i=0; i<itemArray.length; i++) {
       listItem = listItem + '<li><span class = "shopping-item">' + itemArray[i] + '</span><div class="shopping-item-controls"><button class="shopping-item-toggle"><span class="button-label">check</span></button><button class="shopping-item-delete"><span class="button-label">delete</span></button></div></li>'
     }
-  } else {listItem = "";}
-    $('.shopping-list').html(listItem);
-    deleteListItems();
+  } else {listItem = ""};
+  $('.shopping-list').html(listItem);
+  deleteListItems();
+  checkListItems();
 };
 
 function checkForDeleted(item) {
@@ -55,12 +56,10 @@ function addListItems(){
     itemArray.push(itemEntered);
     $('#js-shopping-list-form')[0].reset();
     makeList();
-    //    deleteListItems();
-    checkListItems();
   });
 };
 
-addListItems();
+$(addListItems());
 
 
 
