@@ -43,6 +43,7 @@ function deleteListItems(){
   });
 };
 
+//not completed - just verified the event listener works
 function checkListItems(){
   $('.shopping-item-toggle').click(function(){
     console.log("Check button pushed");
